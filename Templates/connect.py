@@ -12,5 +12,5 @@ m = manager.connect(
     hostkey_verify=False
     )
 for capability in m.server_capabilities:
-     print(capability)
+        print (capability)
 m.close_session()
