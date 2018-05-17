@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from ncclient import manager
 import connect_info
 
