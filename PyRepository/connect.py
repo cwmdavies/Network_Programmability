@@ -1,16 +1,14 @@
 from ncclient import manager
-host = "10.1.1.11"
-port = 830
-username = "cisco"
-password = "cisco"
+import connect_info
 
 m = manager.connect(
-    host=host,
-    port=port,
-    username=username,
-    password=username,
+    host=connect_info.host,
+    port=connect_info.port,
+    username=connect_info.username,
+    password=connect_info.username,
     hostkey_verify=False
     )
-for capability in m.server_capabilities:
-        print (capability)
+with open('Git\\Projects\\PyRepository\\text.txt', 'w') as f:
+    for capability in m.server_capabilities:
+        f.write(str(capability)+'\n')
 m.close_session()
