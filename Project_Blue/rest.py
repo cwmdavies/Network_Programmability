@@ -5,7 +5,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
-
     auth = HTTPBasicAuth('cisco', 'cisco')
     headers = {'Accept': 'application/vnd.yang.data+json',
     'Content-Type': 'application/vnd.yang.data+json'
