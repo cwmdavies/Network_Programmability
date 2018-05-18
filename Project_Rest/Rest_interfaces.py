@@ -9,7 +9,7 @@ if __name__ == "__main__":
     headers = {'Accept': 'application/vnd.yang.data+json',
     'Content-Type': 'application/vnd.yang.data+json'
     }
-url = 'http://10.1.1.11/restconf/api/config/interfaces'
+url = 'http://10.1.1.11/restconf/api/config/interfaces/interface/GigabitEthernet1'
 response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
