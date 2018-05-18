@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-
-from ncclient import manager
 import connect_info
 
-m = manager.connect(
+m = connect_info.manager.connect(
     host=connect_info.host,
     port=connect_info.port,
     username=connect_info.username,
