@@ -7,6 +7,10 @@ get_filter = """
         <interface>
             <GigabitEthernet>
                 <name>1</name>
+                    <ip></ip>
+                    <address></address>
+                        <primary></primary>
+                        <mask></mask>
             </GigabitEthernet>
         </interface>
     </native>
