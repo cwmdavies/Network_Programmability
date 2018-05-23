@@ -14,6 +14,6 @@ response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
 json_response = json.dumps(response, indent=4)
-with open('Git\\Projects\\Project_Rest\\Hostname.txt', 'w') as f:
+with open('Git\\Projects\\Project_Rest\\Outputs\\Hostname.txt', 'w') as f:
     for capability in json_response:
         f.write(str(capability))

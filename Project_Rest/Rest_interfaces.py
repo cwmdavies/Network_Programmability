@@ -16,6 +16,6 @@ response = json.loads(response.text)
 
 json_response = json.dumps(response, indent=4)
 
-with open('Git\\Projects\\Project_Rest\\Interface_Config.txt', 'w') as f:
+with open('Git\\Projects\\Project_Rest\\Outputs\\Interface_Config.txt', 'w') as f:
     for capability in json_response:
         f.write(str(capability))
