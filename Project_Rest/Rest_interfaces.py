@@ -13,4 +13,9 @@ url = 'http://10.1.1.11/restconf/api/config/interfaces/interface/GigabitEthernet
 response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
-print(json.dumps(response, indent=4))
+
+json_response = json.dumps(response, indent=4)
+
+with open('Git\\Projects\\Project_Rest\\Interface_Config.txt', 'w') as f:
+    for capability in json_response:
+        f.write(str(capability))

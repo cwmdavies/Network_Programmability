@@ -13,4 +13,7 @@ url = 'http://10.1.1.11/restconf/api/config/native/hostname'
 response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
-print(json.dumps(response, indent=1))
+json_response = json.dumps(response, indent=4)
+with open('Git\\Projects\\Project_Rest\\Hostname.txt', 'w') as f:
+    for capability in json_response:
+        f.write(str(capability))
