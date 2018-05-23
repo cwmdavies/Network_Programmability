@@ -4,6 +4,8 @@ from lxml import etree
 
 get_filter = """
     <native xmlns="http://cisco.com/ns/yang/ned/ios">
+        <snmp-server>
+        </snmp-server>
     </native>
 """
 
