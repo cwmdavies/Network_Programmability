@@ -8,7 +8,7 @@ m = connect_info.manager.connect(
     password=connect_info.username,
     hostkey_verify=False
     )
-with open('Git\\Projects\\Project_Connect\\text.txt', 'w') as f:
+with open('Git\\Projects\\Project_Netconf\\Output\\capabilities.txt', 'w') as f:
     for capability in m.server_capabilities:
         f.write(str(capability)+'\n')
 m.close_session()
