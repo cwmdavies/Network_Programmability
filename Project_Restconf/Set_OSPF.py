@@ -21,4 +21,4 @@ ospf_object_to_send = {
 response = requests.put(url, data=json.dumps(ospf_object_to_send), headers=headers, auth=auth)
 
 if response.status_code == 204:
-    print('Succesful')
+    print('Successful')
