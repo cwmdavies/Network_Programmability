@@ -17,7 +17,5 @@ ospf_object_to_send = {
     "ned:router": ospf_config
 }
 
-response = requests.put(url, data=json.dumps(ospf_object_to_send), headers=headers, auth=auth)
-
-if response.status_code == 204:
-    print('Successful')
+response = requests.delete(url, data=json.dumps(ospf_object_to_send), headers=headers, auth=auth)
+print(response.status_code)
