@@ -12,7 +12,7 @@ if __name__ == "__main__":
     }
 url = 'http://10.1.1.11/restconf/api/config/native/router'
 
-ospf_config = yaml.load(open('Git\\Projects\\Project_Rest\\Yaml_Files\\ospf-config.yml'))
+ospf_config = yaml.load(open('Git\\Projects\\Project_Restconf\\Yaml_Files\\ospf-config.yml'))
 
 ospf_object_to_send = {
     "ned:router": ospf_config
@@ -20,4 +20,5 @@ ospf_object_to_send = {
 
 response = requests.put(url, data=json.dumps(ospf_object_to_send), headers=headers, auth=auth)
 
-print(response.status_code)
+if response.status_code == 204:
+    print('Succesful')
