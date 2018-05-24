@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import connect_info
+from connection_info import host, port , username, password, manager
 
-m = connect_info.manager.connect(
-    host=connect_info.host,
-    port=connect_info.port,
-    username=connect_info.username,
-    password=connect_info.username,
+m = manager.connect(
+    host=host,
+    port=port,
+    username=username,
+    password=username,
     hostkey_verify=False
     )
 with open('Git\\Projects\\Project_Netconf\\Output\\capabilities.txt', 'w') as f:
