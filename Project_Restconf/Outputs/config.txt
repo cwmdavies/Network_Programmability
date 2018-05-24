@@ -504,7 +504,10 @@
                         ]
                     }
                 ]
-            }
+            },
+            "unicast-routing": [
+                null
+            ]
         },
         "interface": {
             "GigabitEthernet": [
