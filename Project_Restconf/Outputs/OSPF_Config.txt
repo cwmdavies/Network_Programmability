@@ -1,16 +1,16 @@
 {
-     "ned:router": {
-          "ospfv3": [
-               {
-                    "id": 30,
-                    "address-family": {
-                         "ipv4": {
-                              "unicast": {
-                                   "router-id": "3.3.3.3"
-                              }
-                         }
+    "ned:router": {
+        "ospf": [
+            {
+                "id": 10,
+                "network": [
+                    {
+                        "ip": "10.1.1.11",
+                        "mask": "0.0.0.0",
+                        "area": 0
                     }
-               }
-          ]
-     }
+                ]
+            }
+        ]
+    }
 }

@@ -11,7 +11,7 @@ if __name__ == "__main__":
     }
 url = 'http://10.1.1.11/restconf/api/config/native/router'
 
-ospf_config = yaml.load(open('Git/Projects/Project_Restconf/Yaml_Files/ospf-config.yml'))
+ospf_config = yaml.load(open('Projects/Project_Restconf/Yaml_Files/ospf-config.yml'))
 
 ospf_object_to_send = {
     "ned:router": ospf_config
