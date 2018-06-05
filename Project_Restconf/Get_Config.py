@@ -5,11 +5,11 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 if __name__ == "__main__":
-    auth = HTTPBasicAuth('root', 'D_Vay!_10&')
+    auth = HTTPBasicAuth('cisco', 'cisco')
     headers = {'Accept': 'application/vnd.yang.data+json',
     'Content-Type': 'application/vnd.yang.data+json'
     }
-url = 'https://ios-xe-mgmt.cisco.com:9443/restconf/api/config/native?deep'
+url = 'http://10.1.1.11/restconf/api/config/native?deep'
 response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
