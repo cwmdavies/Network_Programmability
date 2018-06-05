@@ -9,7 +9,7 @@ if __name__ == "__main__":
     headers = {'Accept': 'application/vnd.yang.data+json',
     'Content-Type': 'application/vnd.yang.data+json'
     }
-url = 'http://ios-xe-mgmt.cisco.com/restconf/api/config/native?deep'
+url = 'https://ios-xe-mgmt.cisco.com:9443/restconf/api/config/native?deep'
 response = requests.get(url, headers=headers, auth=auth)
 
 response = json.loads(response.text)
