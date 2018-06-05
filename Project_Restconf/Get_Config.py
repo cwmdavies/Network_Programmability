@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-import sys
+#!/usr/bin/env python3.6
 import json
 import requests
 from requests.auth import HTTPBasicAuth
