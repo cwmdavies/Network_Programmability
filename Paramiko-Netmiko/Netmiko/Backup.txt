@@ -1,0 +1,53 @@
+
+config-file-header
+switch44f04b
+v1.4.9.4 / R800_NIK_1_4_205_011
+CLI v1.0
+set system mode switch 
+
+file SSD indicator encrypted
+@
+ssd-control-start
+ssd config
+ssd file passphrase control unrestricted
+no ssd file integrity control
+ssd-control-end cb0a3fdb1f3a1af4e4430033719968c0
+!
+voice vlan oui-table add 0001e3 Siemens_AG_phone________
+voice vlan oui-table add 00036b Cisco_phone_____________
+voice vlan oui-table add 00096e Avaya___________________
+voice vlan oui-table add 000fe2 H3C_Aolynk______________
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone___________
+voice vlan oui-table add 00e075 Polycom/Veritel_phone___
+voice vlan oui-table add 00e0bb 3Com_phone______________
+hostname switch44f04b
+aaa authentication login authorization SSH local
+aaa authentication enable authorization SSH enable
+aaa authentication login authorization Console local
+aaa authentication enable authorization Console enable
+line ssh
+login authentication SSH
+enable authentication SSH
+password da39a3ee5e6b4b0d3255bfef95601890afd80709 encrypted
+exit
+line console
+login authentication Console
+enable authentication Console
+password da39a3ee5e6b4b0d3255bfef95601890afd80709 encrypted
+exit
+username cisco password encrypted 70ccd9007338d6d81dd3b6271621b9cf9a97ea00 privilege 15
+ip ssh server
+ip ssh password-auth
+!
+
+Created by: D-Default, S-Static, G-GVRP, R-Radius Assigned VLAN, V-Voice VLAN
+
+Vlan       Name           Tagged Ports      UnTagged Ports      Created by    
+---- ----------------- ------------------ ------------------ ---------------- 
+ 1           1                            fa1-8,gi1-2,Po1-8         V         
+
+
+SW version    1.4.9.4 ( date  04-Jun-2018 time  00:07:58 )
+Boot version    1.3.5.06 ( date  21-Jul-2013 time  15:12:10 )
+HW version    V03
